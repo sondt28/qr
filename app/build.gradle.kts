@@ -41,11 +41,24 @@ android {
     buildFeatures {
         viewBinding = true
     }
+    flavorDimensions += "version"
+
+    productFlavors {
+        create("appDev") {
+            dimension = "version"
+            manifestPlaceholders["app_id_admod"] = "ca-app-pub-3940256099942544~3347511713"
+        }
+        create("appProd") {
+            dimension = "version"
+            manifestPlaceholders["app_id_admod"] = "ca-app-pub-3940256099942544~3347511713"
+        }
+    }
 }
 
 dependencies {
     implementation(project(":common"))
     ksp(libs.hilt.compiler)
+    implementation("com.google.android.gms:play-services-ads:23.3.0")
     implementation(libs.hilt.android)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
