@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">QRScan</string>
+    <string name="splash_app_name">QR Scanner</string>
+    <string name="splash_action_contain_ads">(This action can contain ads)</string>
+    <string name="language_title">Select language</string>
+    <string name="language_france" translatable="false">Francias</string>
+    <string name="language_english" translatable="false">English</string>
+    <string name="language_hindi" translatable="false">हिन्दी</string>
+    <string name="language_saudi" translatable="false">العربية</string>
+    <string name="language_deutsch" translatable="false">Deutsch</string>
+    <string name="language_spain" translatable="false">Española</string>
+    <string name="language_china" translatable="false">Chinese</string>
+</resources>

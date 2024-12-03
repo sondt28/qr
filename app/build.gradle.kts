@@ -57,9 +57,25 @@ android {
 
 dependencies {
     implementation(project(":common"))
-    ksp(libs.hilt.compiler)
-    implementation("com.google.android.gms:play-services-ads:23.3.0")
+
+    implementation (libs.androidx.camera.core)
+    implementation (libs.androidx.camera.camera2)
+    implementation (libs.androidx.camera.lifecycle)
+    implementation (libs.androidx.camera.video)
+    implementation (libs.androidx.camera.view)
+    implementation (libs.androidx.camera.extensions)
+
+    implementation (libs.sdp.android)
+    implementation (libs.ssp.android)
+
+    implementation(libs.lottie)
+
+    implementation(libs.play.services.ads)
+
     implementation(libs.hilt.android)
+    ksp(libs.hilt.compiler)
+
+    implementation (libs.androidx.lifecycle.viewmodel.ktx)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
