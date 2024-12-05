@@ -34,9 +34,10 @@ class LanguageViewModel @Inject constructor(private val languageRepository: Lang
             },
             selectedLanguage = language
         )
+        enableNextButton()
     }
 
-    fun enableNextButton() {
+    private fun enableNextButton() {
         if (!_uiState.value.isNextEnabled) {
             _uiState.value = _uiState.value.copy(
                 isNextEnabled = true

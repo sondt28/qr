@@ -51,7 +51,6 @@ class LanguageActivity : BaseActivity<ActivityLanguageBinding>() {
     override fun setupListener() {
         adapter.onItemClickListener = {
             viewModel.selectLanguage(it)
-            viewModel.enableNextButton()
         }
 
         binding.ivCheck.setOnClickListener {
