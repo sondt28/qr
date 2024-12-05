@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/scan"
+        android:icon="@drawable/ic_home_scan"
+        android:title="@string/bottom_nav_scan" />
+
+    <item
+        android:id="@+id/create"
+        android:icon="@drawable/ic_home_create"
+        android:title="@string/bottom_nav_create" />
+
+    <item
+        android:id="@+id/history"
+        android:icon="@drawable/ic_home_clock"
+        android:title="@string/bottom_nav_history" />
+
+    <item
+        android:id="@+id/settings"
+        android:icon="@drawable/ic_home_setting"
+        android:title="@string/bottom_nav_settings" />
+</menu>
