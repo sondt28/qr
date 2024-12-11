@@ -8,7 +8,7 @@ import androidx.fragment.app.DialogFragment
 import androidx.viewbinding.ViewBinding
 
 abstract class BaseDialogFragment<V: ViewBinding> : DialogFragment() {
-    private lateinit var binding: V
+    lateinit var binding: V
     protected abstract fun inflateLayout(inflater: LayoutInflater) : V
 
     override fun onCreateView(
@@ -20,8 +20,17 @@ abstract class BaseDialogFragment<V: ViewBinding> : DialogFragment() {
         return binding.root
     }
 
+    private fun setSizeDialog() {
+        val params = dialog?.window?.attributes
+        params?.width = (resources.displayMetrics.widthPixels * 0.88).toInt()
+        params?.height = ViewGroup.LayoutParams.WRAP_CONTENT
+        dialog?.window?.attributes = params
+    }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        dialog?.window?.setBackgroundDrawable(null)
+        setSizeDialog()
         initView()
     }
 

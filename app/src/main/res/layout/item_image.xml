@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.son.common.ui.widget.CustomRoundedImageView
+        android:id="@+id/ivPreview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_margin="@dimen/_2sdp"
+        android:scaleType="centerCrop"
+        app:cornerRadius="@dimen/_4sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/vSelected"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/bg_gallery_image"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/ivPreview"
+        app:layout_constraintEnd_toEndOf="@+id/ivPreview"
+        app:layout_constraintStart_toStartOf="@+id/ivPreview"
+        app:layout_constraintTop_toTopOf="@+id/ivPreview" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
