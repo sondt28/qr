@@ -33,6 +33,7 @@ android {
 }
 
 dependencies {
+    implementation (libs.glide)
     implementation (libs.sdp.android)
     implementation (libs.ssp.android)
     implementation(libs.androidx.core.ktx)

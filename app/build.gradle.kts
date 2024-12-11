@@ -57,6 +57,9 @@ android {
 
 dependencies {
     implementation(project(":common"))
+
+    implementation (libs.glide)
+
     implementation (libs.barcode.scanning)
     implementation (libs.androidx.camera.mlkit.vision)
     implementation(libs.guava)
@@ -67,16 +70,14 @@ dependencies {
     implementation (libs.androidx.camera.view)
     implementation (libs.androidx.camera.extensions)
 
-
-
     implementation(libs.lottie)
 
     implementation(libs.play.services.ads)
 
     implementation(libs.hilt.android)
-    implementation(libs.androidx.navigation.fragment.ktx)
     ksp(libs.hilt.compiler)
 
+    implementation(libs.androidx.navigation.fragment.ktx)
     implementation (libs.androidx.lifecycle.viewmodel.ktx)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)

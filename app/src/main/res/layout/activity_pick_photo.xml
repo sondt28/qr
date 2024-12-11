@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/vGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="ivNoPermission, tvAllowAccess, tvGoSetting, tvAllowAccessDesc" />
+
+    <ImageView
+        android:id="@+id/ivBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_14sdp"
+        android:layout_marginTop="@dimen/_13sdp"
+        android:padding="@dimen/_3sdp"
+        android:src="@drawable/ic_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:fontFamily="@font/inter_medium"
+        android:gravity="center"
+        android:text="@string/gallery_all"
+        android:textColor="@color/text_secondary"
+        android:textSize="@dimen/_15ssp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivBack"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ivBack" />
+
+    <ImageView
+        android:id="@+id/ivDown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_6sdp"
+        android:src="@drawable/ic_gallery_down"
+        app:layout_constraintBottom_toBottomOf="@id/tvCategory"
+        app:layout_constraintStart_toEndOf="@id/tvCategory"
+        app:layout_constraintTop_toTopOf="@id/tvCategory" />
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_14sdp"
+        android:background="@color/f2f1f6"
+        app:layout_constraintBottom_toTopOf="@+id/vUpload"
+        app:layout_constraintTop_toBottomOf="@+id/ivBack" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvFolder"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="@drawable/bg_gallery_category"
+        android:elevation="3dp"
+        android:paddingStart="@dimen/_17sdp"
+        android:paddingTop="@dimen/_6sdp"
+        android:paddingEnd="@dimen/_24sdp"
+        android:visibility="gone"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="@id/view"
+        app:layout_constraintTop_toTopOf="@+id/view"
+        tools:listitem="@layout/item_image" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvImage"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:elevation="2dp"
+        android:orientation="vertical"
+        android:padding="@dimen/_6sdp"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view"
+        app:spanCount="3"
+        tools:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/ivNoPermission"
+        android:layout_width="@dimen/_124sdp"
+        android:layout_height="@dimen/_124sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:src="@drawable/img_no_permission"
+        app:layout_constraintBottom_toTopOf="@+id/tvAllowAccess"
+        app:layout_constraintEnd_toEndOf="@+id/tvAllowAccess"
+        app:layout_constraintStart_toStartOf="@+id/tvAllowAccess" />
+
+    <TextView
+        android:id="@+id/tvAllowAccess"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/inter_semibold"
+        android:text="@string/gallery_access_photo_title"
+        android:textColor="@color/text_primary"
+        android:textSize="@dimen/_14ssp"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/view" />
+
+    <TextView
+        android:id="@+id/tvAllowAccessDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:fontFamily="@font/inter"
+        android:gravity="center"
+        android:paddingHorizontal="@dimen/_32sdp"
+        android:text="@string/gallery_access_photo_desc"
+        android:textColor="@color/text_primary"
+        android:textSize="@dimen/_12ssp"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvAllowAccess" />
+
+    <TextView
+        android:id="@+id/tvGoSetting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:background="@drawable/bg_radius_50"
+        android:backgroundTint="@color/primary_color"
+        android:elevation="2dp"
+        android:fontFamily="@font/inter_bold"
+        android:gravity="center"
+        android:paddingVertical="@dimen/_10sdp"
+        android:text="@string/gallery_go_to_setting"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_13ssp"
+        app:layout_constraintEnd_toEndOf="@+id/view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvAllowAccessDesc" />
+
+    <ImageView
+        android:id="@+id/ivNoData"
+        android:layout_width="@dimen/_150sdp"
+        android:layout_height="@dimen/_150sdp"
+        android:src="@drawable/img_gallery_no_data"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view" />
+
+    <TextView
+        android:id="@+id/tvUpload"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:alpha="0.5"
+        android:background="@drawable/bg_radius_12"
+        android:backgroundTint="@color/primary_color"
+        android:fontFamily="@font/inter_semibold"
+        android:gravity="center"
+        android:paddingVertical="@dimen/_10sdp"
+        android:text="@string/gallery_upload"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_13ssp"
+        app:layout_constraintBottom_toBottomOf="@id/vUpload"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/vUpload"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHeight_percent="0.11" />
+</androidx.constraintlayout.widget.ConstraintLayout>

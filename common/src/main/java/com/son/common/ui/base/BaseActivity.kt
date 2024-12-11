@@ -21,9 +21,9 @@ abstract class BaseActivity<VB: ViewBinding> : AppCompatActivity() {
 
         applyTopPaddingToStatusBar(binding.root)
 
+        setupUI()
         setupObserver()
         setupListener()
-        setupUI()
     }
 
     private fun applyTopPaddingToStatusBar(view: View) {

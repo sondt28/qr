@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_radius_16">
+
+    <ImageView
+        android:id="@+id/ivClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/_7sdp"
+        android:layout_marginEnd="@dimen/_7sdp"
+        android:src="@drawable/ic_close" />
+
+    <ImageView
+        android:id="@+id/ivIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_17sdp"
+        android:src="@drawable/ic_dialog_photo" />
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ivIcon"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_7sdp"
+        android:fontFamily="@font/inter_semibold"
+        android:text="@string/gallery_access_photo_title"
+        android:textColor="@color/text_primary"
+        android:textSize="@dimen/_13ssp" />
+
+    <TextView
+        android:id="@+id/tvDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginHorizontal="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:fontFamily="@font/inter"
+        android:gravity="center"
+        android:text="@string/dialog_photo_permission_desc"
+        android:textColor="@color/text_primary"
+        android:textSize="@dimen/_13ssp" />
+
+    <TextView
+        android:id="@+id/tvGoToSetting"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tvDesc"
+        android:layout_marginHorizontal="@dimen/_14sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_13sdp"
+        android:background="@drawable/bg_radius_50"
+        android:backgroundTint="@color/primary_color"
+        android:fontFamily="@font/inter_bold"
+        android:gravity="center"
+        android:paddingVertical="@dimen/_10sdp"
+        android:text="@string/gallery_go_to_setting"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_13ssp" />
+</RelativeLayout>

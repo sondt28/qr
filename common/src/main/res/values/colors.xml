@@ -9,5 +9,7 @@
     <color name="b3222222">#B3222222</color>
     <color name="e6ffffff">#E6FFFFFF</color>
     <color name="_94a3b8">#94A3B8</color>
-
+    <color name="f2f1f6">#F2F1F6</color>
+    <color name="_666666">#666666</color>
+    <color name="rounded_image_border_color">#E3E3E3</color>
 </resources>

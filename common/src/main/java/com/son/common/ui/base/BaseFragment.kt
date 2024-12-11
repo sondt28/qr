@@ -8,7 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.viewbinding.ViewBinding
 
 abstract class BaseFragment<V : ViewBinding> : Fragment() {
-    private lateinit var binding: V
+    lateinit var binding: V
     protected abstract fun inflateLayout(inflater: LayoutInflater) : V
 
     override fun onCreateView(

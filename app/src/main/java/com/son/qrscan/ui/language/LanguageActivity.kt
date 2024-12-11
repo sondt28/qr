@@ -1,6 +1,5 @@
 package com.son.qrscan.ui.language
 
-import android.util.Log
 import android.view.LayoutInflater
 import androidx.activity.viewModels
 import androidx.lifecycle.lifecycleScope
@@ -13,7 +12,6 @@ import kotlinx.coroutines.flow.filterNotNull
 import kotlinx.coroutines.flow.launchIn
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.flow.onEach
-import java.util.Locale
 
 @AndroidEntryPoint
 class LanguageActivity : BaseActivity<ActivityLanguageBinding>() {
@@ -44,7 +42,6 @@ class LanguageActivity : BaseActivity<ActivityLanguageBinding>() {
     }
 
     override fun setupUI() {
-        Log.d("TAG", "setupUI: ${Locale.getDefault().language}")
         binding.rcLanguage.adapter = adapter
     }
 
