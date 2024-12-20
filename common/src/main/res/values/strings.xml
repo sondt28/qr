@@ -24,6 +24,11 @@
     <string name="gallery_access_photo_title">Allow access to your photos</string>
     <string name="gallery_access_photo_desc">Grant our app with the photo access permission to choose the photos.</string>
     <string name="gallery_go_to_setting">Go to setting</string>
-
+    <string name="first_intro_title"><![CDATA[QR & Barcode Scanner]]></string>
+    <string name="first_intro_description">Making everything easier to find</string>
+    <string name="second_intro_title">Customize QR design</string>
+    <string name="second_intro_description">Create and customize QR codes to suit your personality</string>
+    <string name="third_intro_title">Find the Best Deals</string>
+    <string name="third_intro_description">Noe need to strain your eyes comparing prices, just one scan</string>
     <string name="dialog_photo_permission_desc"><![CDATA[Enable permissions in the system settings. Please follow these steps: Setting > Permissions > Photos and videos to give access.]]></string>
 </resources>
