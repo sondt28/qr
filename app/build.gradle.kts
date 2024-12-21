@@ -13,7 +13,7 @@ android {
     defaultConfig {
         applicationId = "com.son.qrscan"
         minSdk = 26
-        targetSdk = 34
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
 
@@ -57,7 +57,7 @@ android {
 
 dependencies {
     implementation(project(":common"))
-
+    implementation(libs.dotsindicator)
     implementation (libs.glide)
 
     implementation (libs.barcode.scanning)
