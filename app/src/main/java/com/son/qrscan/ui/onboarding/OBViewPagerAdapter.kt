@@ -21,6 +21,6 @@ class OBViewPagerAdapter(fragment: OnBoardingActivity, private var listTitle: Ar
         const val TAB_1 = 0
         const val TAB_2 = 1
         const val TAB_3 = 2
-        const val TAB_4 = 3
+
     }
 }
