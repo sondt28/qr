@@ -12,6 +12,8 @@
     <string name="language_china" translatable="false">Chinese</string>
 
     <string name="home_using_available_images">Using available images</string>
+    <string name="onboarding_next">Next</string>
+    <string name="onboarding_get_started">Get Started</string>
 
     <string name="bottom_nav_scan">Scan</string>
     <string name="bottom_nav_create">Create</string>
@@ -32,5 +34,5 @@
     <string name="second_intro_title">Customize QR design</string>
     <string name="second_intro_description">Create and customize QR codes to suit your personality</string>
     <string name="third_intro_title">Find the Best Deals</string>
-    <string name="third_intro_description">Noe need to strain your eyes comparing prices, just one scan</string>
+    <string name="third_intro_description">No need to strain your eyes comparing prices, just one scan</string>
 </resources>
